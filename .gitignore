@@ -1,0 +1,12 @@
+# Node / Vite
+client/node_modules/
+client/dist/
+client/.vite/
+
+# .NET
+server/**/bin/
+server/**/obj/
+
+# OS
+.DS_Store
+Thumbs.db

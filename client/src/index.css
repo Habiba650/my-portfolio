@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme tokens (RGB channels so Tailwind opacity utilities keep working) */
+:root {
+  --ink: 20 23 31;
+  --inksoft: 75 81 96;
+  --paper: 255 255 255;
+  --papersoft: 247 248 250;
+  --border: 230 232 236;
+  --blue: 41 82 204;
+  --solid: 41 82 204;
+  --teal: 12 133 153;
+  --contact: 20 23 31;
+  color-scheme: light;
+}
+
+.dark {
+  --ink: 232 234 240;
+  --inksoft: 163 169 184;
+  --paper: 15 17 23;
+  --papersoft: 23 26 34;
+  --border: 39 43 54;
+  --blue: 122 150 255;
+  --solid: 61 99 224;
+  --teal: 56 196 216;
+  --contact: 22 26 36;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: rgb(var(--ink));
+  background: rgb(var(--paper));
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: rgb(var(--solid));
+  color: #ffffff;
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgb(var(--border)) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--border)) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: center;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--blue));
+  outline-offset: 2px;
+}
